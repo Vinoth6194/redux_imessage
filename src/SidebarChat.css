@@ -10,3 +10,8 @@
   background-color: #3e93fd;
   color: white;
 }
+.sidebarChat__info {
+  width: 100%;
+  margin-left: 15px;
+  position: relative;
+}
