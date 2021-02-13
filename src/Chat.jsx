@@ -16,18 +16,20 @@ function Chat() {
     setInput("");
   };
   useEffect(() => {
-    db.collection("chats")
-      .doc(chatId)
-      .collection("messages")
-      .orderBy("timestamp", "desc")
-      .onSnapshot((snapshot) =>
-        setMessages(
-          snapshot.docs.map((doc) => ({
-            id: doc.id,
-            data: doc.data(),
-          }))
-        )
-      );
+    if (chatId) {
+      db.collection("chats")
+        .doc(chatId)
+        .collection("messages")
+        .orderBy("timestamp", "desc")
+        .onSnapshot((snapshot) =>
+          setMessages(
+            snapshot.docs.map((doc) => ({
+              id: doc.id,
+              data: doc.data(),
+            }))
+          )
+        );
+    }
   }, [chatId]);
 
   return (
@@ -41,7 +43,9 @@ function Chat() {
       </div>
       {/* chat messages */}
       <div className="chat__messages">
-        <Message />
+        {messages.map(({ id, data }) => (
+          <Message key={id} contents={data}></Message>
+        ))}
       </div>
 
       {/* chat input */}
