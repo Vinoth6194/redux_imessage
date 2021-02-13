@@ -4,7 +4,12 @@ function Chat() {
   return (
     <div className="chat">
       {/* chat header */}
-      <h3>To:Channel name</h3>
+      <div className="chat__header">
+        <h4>
+          To: <span className="chat__name">ChannelName</span>
+        </h4>
+        <strong>Details</strong>
+      </div>
       {/* chat messages */}
       {/* chat input */}
     </div>
