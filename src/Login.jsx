@@ -1,7 +1,13 @@
 import { Button } from "@material-ui/core";
 import React from "react";
+import { auth, provider } from "./firebase";
+
 import "./Login.css";
+
 function Login() {
+  const signIn = () => {
+    auth.signInWithPopup(provider).catch((error) => alert(error.message));
+  };
   return (
     <div className="login">
       <div className="login__logo">
@@ -13,7 +19,7 @@ function Login() {
 
         <h1>Vinoth iMessage</h1>
       </div>
-      <Button>Sign In</Button>
+      <Button onClick={signIn}>Sign In</Button>
     </div>
   );
 }
