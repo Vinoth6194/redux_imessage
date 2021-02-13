@@ -16,3 +16,10 @@
   cursor: pointer;
   margin: 10px;
 }
+.sidebar__input {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex: 1;
+  background-color: #e1e1e1;
+}
