@@ -18,6 +18,8 @@ function Chat() {
         <strong>Details</strong>
       </div>
       {/* chat messages */}
+      <div className="chat__messages"></div>
+
       {/* chat input */}
       <div className="chat__input">
         <form>

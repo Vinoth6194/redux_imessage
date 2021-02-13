@@ -42,3 +42,7 @@
 .chat__input > form > button {
   display: none;
 }
+
+.chat__messages {
+  flex: 1;
+}
