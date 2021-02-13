@@ -28,3 +28,7 @@
 .login_img {
   padding-left: 50px;
 }
+.login > button:hover {
+  background-color: gainsboro;
+  color: #3ea4fb;
+}
