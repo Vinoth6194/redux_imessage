@@ -15,3 +15,9 @@
   margin-left: 15px;
   position: relative;
 }
+
+.sidebarChat__info > small {
+  position: absolute;
+  top: 5px;
+  right: 0;
+}
