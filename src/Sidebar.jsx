@@ -7,7 +7,7 @@ function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebar__header">
-        <Avatar></Avatar>
+        <Avatar className="sidebar__avatar"></Avatar>
         <div className="sidebar__input">
           <SearchIcon />
           <input placeholder="search" />
