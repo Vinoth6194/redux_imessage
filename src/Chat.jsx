@@ -1,17 +1,35 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import MicNoneIcon from "@material-ui/icons/MicNone";
 import "./Chat.css";
 import { IconButton } from "@material-ui/core";
 import Message from "./Message";
 import { useSelector } from "react-redux";
-import { selectChatName } from "./features/chatSlice";
+import { selectChatId, selectChatName } from "./features/chatSlice";
+import db from "./firebase";
 function Chat() {
   const [input, setInput] = useState("");
+  const [messages, setMessages] = useState([]);
   const chatName = useSelector(selectChatName);
+  const chatId = useSelector(selectChatId);
   const sendMessage = (e) => {
     e.preventDefault();
     setInput("");
   };
+  useEffect(() => {
+    db.collection("chats")
+      .doc(chatId)
+      .collection("messages")
+      .orderBy("timestamp", "desc")
+      .onSnapshot((snapshot) =>
+        setMessages(
+          snapshot.docs.map((doc) => ({
+            id: doc.id,
+            data: doc.data(),
+          }))
+        )
+      );
+  }, [chatId]);
+
   return (
     <div className="chat">
       {/* chat header */}
