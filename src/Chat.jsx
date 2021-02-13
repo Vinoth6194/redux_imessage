@@ -54,6 +54,7 @@ function Chat() {
       </div>
       {/* chat messages */}
       <div className="chat__messages">
+        {console.log("Your data is", messages)};
         {messages.map(({ id, data }) => (
           <Message key={id} contents={data}></Message>
         ))}
