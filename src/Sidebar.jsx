@@ -49,7 +49,7 @@ function Sidebar() {
       </div>
       <div className="sidebar__chats">
         {chats.map(({ id, data: { chatName } }) => (
-          <SidebarChat key={id} chatName={chatName} />
+          <SidebarChat key={id} chatName={chatName} id={id} />
         ))}
       </div>
     </div>
