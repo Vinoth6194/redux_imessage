@@ -27,3 +27,8 @@
 .message__sender {
   margin-left: auto;
 }
+
+.message__sender > .message__photo {
+  order: 1;
+  margin: 15px;
+}
