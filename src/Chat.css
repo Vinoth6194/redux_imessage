@@ -46,3 +46,12 @@
 .chat__messages {
   flex: 1;
 }
+
+.chat__messages {
+  overflow: scroll;
+  flex: 1;
+}
+
+.chat__messages::-webkit-scrollbar {
+  display: none;
+}
