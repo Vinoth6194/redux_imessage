@@ -30,7 +30,7 @@ function SidebarChat({ id, chatName }) {
         )
       }
     >
-      <Avatar />
+      <Avatar src={chatInfo[0]?.photo} />
       <div className="sidebarChat__info">
         <h3>{chatName}</h3>
         {console.log("Chat info", chatInfo)}
