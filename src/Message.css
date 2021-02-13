@@ -23,3 +23,7 @@
   bottom: -5px;
   right: 0;
 }
+
+.message__sender {
+  margin-left: auto;
+}

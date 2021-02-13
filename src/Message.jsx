@@ -11,7 +11,7 @@ function Message({
 
   return (
     <div className={`message ${user.email === email && "message__sender"}`}>
-      <Avatar src={photo} />
+      <Avatar className="message__photo" src={photo} />
       <p>{message}</p>
       <small>{new Date(timestamp?.toDate()).toLocaleString()}</small>
     </div>
