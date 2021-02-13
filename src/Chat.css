@@ -20,3 +20,10 @@
 .chat__name {
   color: black;
 }
+.chat__input {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-top: 1px solid lightgray;
+  background-color: #f5f5f5;
+}
