@@ -1,0 +1,7 @@
+.sidebarChat {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 20px;
+  border-bottom: 2px solid lightgray;
+}
