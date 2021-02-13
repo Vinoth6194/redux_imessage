@@ -35,7 +35,7 @@ function SidebarChat({ id, chatName }) {
         <h3>{chatName}</h3>
         {console.log("Chat info", chatInfo)}
 
-        <p>last message sent </p>
+        <p>{chatInfo[0]?.message}</p>
         <small>timestamp</small>
       </div>
     </div>
